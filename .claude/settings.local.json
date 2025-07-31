@@ -20,7 +20,11 @@
       "Bash(git branch:*)",
       "WebFetch(domain:artucruzarm.github.io)",
       "WebFetch(domain:arturocruzarm.github.io)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(npm run dev:*)",
+      "Bash(rm:*)",
+      "Bash(ls:*)",
+      "Bash(npm run lint)"
     ],
     "deny": []
   }
