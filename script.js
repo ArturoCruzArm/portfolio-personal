@@ -1,5 +1,9 @@
 // Navegación suave
 document.addEventListener('DOMContentLoaded', function() {
+    // Performance optimization: usar passive listeners donde sea posible
+    const addPassiveEventListener = (element, event, handler) => {
+        element.addEventListener(event, handler, { passive: true });
+    };
     // Smooth scrolling para los enlaces de navegación
     const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
     
@@ -22,14 +26,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Highlight active navigation item
+    // Highlight active navigation item con optimización de rendimiento
     const sections = document.querySelectorAll('section[id]');
     const observerOptions = {
         threshold: 0.3,
         rootMargin: '-70px 0px -70px 0px'
     };
     
-    const observer = new IntersectionObserver(function(entries) {
+    // Throttle function para mejorar rendimiento
+    const throttle = (func, limit) => {
+        let inThrottle;
+        return function() {
+            const args = arguments;
+            const context = this;
+            if (!inThrottle) {
+                func.apply(context, args);
+                inThrottle = true;
+                setTimeout(() => inThrottle = false, limit);
+            }
+        }
+    };
+    
+    const observer = new IntersectionObserver(throttle(function(entries) {
         entries.forEach(entry => {
             const navLink = document.querySelector(`.nav-menu a[href="#${entry.target.id}"]`);
             
@@ -42,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
-    }, observerOptions);
+    }, 100), observerOptions);
     
     sections.forEach(section => {
         observer.observe(section);
