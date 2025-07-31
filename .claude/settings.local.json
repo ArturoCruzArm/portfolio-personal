@@ -17,7 +17,8 @@
       "Bash(npm exec:*)",
       "Bash(mkdir:*)",
       "Bash(npm run build:*)",
-      "Bash(git branch:*)"
+      "Bash(git branch:*)",
+      "WebFetch(domain:artucruzarm.github.io)"
     ],
     "deny": []
   }

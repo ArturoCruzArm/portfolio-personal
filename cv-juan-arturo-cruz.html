@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Juan Arturo Cruz Armenta</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #fff;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+        
+        .header h2 {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h3 {
+            font-size: 1.3rem;
+            color: #2563eb;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 20px;
+        }
+        
+        .experience-item h4, .education-item h4 {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .period {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .experience-item ul {
+            margin-left: 20px;
+        }
+        
+        .experience-item li {
+            margin-bottom: 5px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-category h4 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+        }
+        
+        .skill-category li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .certifications {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        
+        .cert-item {
+            background: #f8fafc;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 3px solid #2563eb;
+        }
+        
+        @media print {
+            body {
+                padding: 20px;
+                font-size: 12px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎓 JUAN ARTURO CRUZ ARMENTA</h1>
+        <h2>Desarrollador Backend & Full Stack | Productor Multimedia | Emprendedor Creativo</h2>
+        <div class="contact-info">
+            <span>📍 León, Guanajuato, México</span>
+            <span>📧 foro7.producciones@hotmail.com</span>
+            <span>📧 foro7.arturocruz@gmail.com</span>
+            <span>📱 GitHub: ArturoCruzArm</span>
+            <span>🔗 LinkedIn: juanarturocruzarmenta</span>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h3>🚀 Perfil Profesional</h3>
+        <p>Desarrollador Full-Stack especializado en Java y React, con sólida experiencia en automatización de procesos, backend empresarial y dirección creativa audiovisual. Estudiante activo en UVEG, con habilidades certificadas en redes, programación, DevOps básico y edición multimedia. Desde los 12 años dirijo Producciones Foro 7, combinando lo técnico con lo artístico para crear soluciones integrales y experiencias visuales memorables.</p>
+    </div>
+    
+    <div class="section">
+        <h3>📌 Experiencia Profesional</h3>
+        
+        <div class="experience-item">
+            <h4>Coqueta y Audaz – Desarrollador Backend</h4>
+            <div class="period">Julio 2022 – Julio 2025</div>
+            <ul>
+                <li>Optimización de consultas SQL (+80% rendimiento)</li>
+                <li>Automatización con jobs, triggers y procedimientos</li>
+                <li>Integración continua, patrón MVVM y despliegues productivos</li>
+                <li>Implementación de arquitecturas escalables</li>
+            </ul>
+        </div>
+        
+        <div class="experience-item">
+            <h4>Producciones Foro 7 – León, Gto. Fundador & Productor Multimedia</h4>
+            <div class="period">Desde 2012 – Actualidad</div>
+            <ul>
+                <li>Dirección y postproducción de más de 150 eventos sociales</li>
+                <li>Edición profesional con Adobe Suite (Diplomado con validez internacional)</li>
+                <li>Gestión integral de clientes, logística y entrega visual</li>
+                <li>Crecimiento sostenido durante 12+ años</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h3>🎓 Formación Académica</h3>
+        
+        <div class="education-item">
+            <h4>Universidad Virtual del Estado de Guanajuato (UVEG)</h4>
+            <div class="period">Licenciatura en Tecnologías de la Información | En curso - Finalización: octubre 2025</div>
+        </div>
+        
+        <div class="education-item">
+            <h4>Instituto Tecnológico de León (ITL)</h4>
+            <div class="period">Estudios hasta 11vo semestre (interrumpidos por pandemia)</div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h3>💻 Habilidades Técnicas</h3>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Tecnologías</h4>
+                <ul>
+                    <li>Java Spring Boot (95%)</li>
+                    <li>React.js (92%)</li>
+                    <li>TypeScript (90%)</li>
+                    <li>Python (88%)</li>
+                    <li>SQL Optimization (95%)</li>
+                    <li>PHP (85%)</li>
+                    <li>HTML/CSS (90%)</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h4>Multimedia</h4>
+                <ul>
+                    <li>Adobe Premiere Pro (95%)</li>
+                    <li>After Effects (88%)</li>
+                    <li>Fotografía 4K (92%)</li>
+                    <li>Edición Profesional (90%)</li>
+                    <li>Adobe Suite (85%)</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h4>Otros</h4>
+                <ul>
+                    <li>DevOps Básico (80%)</li>
+                    <li>Cisco Networking (85%)</li>
+                    <li>Gestión de Proyectos (90%)</li>
+                    <li>Git/GitHub (92%)</li>
+                    <li>Educación Financiera (88%)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h3>🏅 Certificaciones</h3>
+        <div class="certifications">
+            <div class="cert-item">
+                <strong>Técnico en Informática</strong><br>
+                Fundación Carlos Slim - 2023
+            </div>
+            <div class="cert-item">
+                <strong>Curador de Datos</strong><br>
+                Fundación Carlos Slim - 2023
+            </div>
+            <div class="cert-item">
+                <strong>Desarrollador Web</strong><br>
+                Fundación Carlos Slim - 2023
+            </div>
+            <div class="cert-item">
+                <strong>Spring Boot, Java, React.js</strong><br>
+                SoloLearn - 2023
+            </div>
+            <div class="cert-item">
+                <strong>Python, PHP, SQL</strong><br>
+                SoloLearn - 2023
+            </div>
+            <div class="cert-item">
+                <strong>Cisco Networking</strong><br>
+                Cisco Academy - 2023
+            </div>
+            <div class="cert-item">
+                <strong>Edición de Video Digital</strong><br>
+                Diplomado Internacional - 2022
+            </div>
+            <div class="cert-item">
+                <strong>Educación Financiera (9/10)</strong><br>
+                Gobierno de México - 2023
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h3>📋 Información Adicional</h3>
+        <p><strong>Fecha de Nacimiento:</strong> 18 de octubre de 1993</p>
+        <p><strong>CURP:</strong> CUAJ931018HGTRRN04</p>
+        <p><strong>RFC:</strong> CUAJ931018F36</p>
+        <p><strong>Disponibilidad:</strong> Inmediata</p>
+        <p><strong>Modalidad:</strong> Presencial, Remoto o Híbrido</p>
+    </div>
+    
+    <script>
+        // Auto-print on load for PDF generation
+        window.onload = function() {
+            if (window.location.search.includes('print=true')) {
+                window.print();
+            }
+        }
+    </script>
+</body>
+</html>
