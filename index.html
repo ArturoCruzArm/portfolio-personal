@@ -10,6 +10,13 @@
     <meta name="language" content="es">
     <meta name="revisit-after" content="7 days">
     
+    <!-- Performance and Mobile Optimization -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="format-detection" content="address=no">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://github.com">
+    
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Juan Arturo Cruz Armenta - Desarrollador Full Stack">
     <meta property="og:description" content="Desarrollador Backend & Full Stack especializado en Java Spring Boot, React.js, Python. Productor Multimedia profesional con 12+ años de experiencia.">
@@ -46,23 +53,30 @@
             <ul class="nav-menu">
                 <li><a href="#perfil">Perfil</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#experiencia">Experiencia</a></li>
                 <li><a href="#educacion">Educación</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar tema">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
         </nav>
     </header>
 
     <main id="main-content">
-        <section class="hero">
+        <section class="hero parallax">
             <div class="hero-content">
-                <h1>🎓 Juan Arturo Cruz Armenta</h1>
-                <h2>Desarrollador Backend & Full Stack | Productor Multimedia | Emprendedor Creativo</h2>
-                <p class="location">📍 León, Guanajuato, México</p>
+                <h1 class="floating">🎓 Juan Arturo Cruz Armenta</h1>
+                <h2 class="gradient-text">Desarrollador Backend & Full Stack | Productor Multimedia | Emprendedor Creativo</h2>
+                <p class="location floating">📍 León, Guanajuato, México</p>
                 <div class="hero-buttons">
                     <a href="#contacto" class="btn btn-primary">Contáctame</a>
                     <a href="https://github.com/ArturoCruzArm" class="btn btn-secondary" target="_blank">
                         <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="cv-juan-arturo-cruz.html" class="btn btn-secondary" target="_blank">
+                        <i class="fas fa-download"></i> CV
                     </a>
                 </div>
             </div>
@@ -105,6 +119,74 @@
                             <li>Educación Financiera</li>
                             <li>Gestión de Proyectos</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="section bg-alt">
+            <div class="container">
+                <h2>🚀 Proyectos Destacados</h2>
+                <div class="projects-grid">
+                    <div class="project-card floating">
+                        <div class="project-image">
+                            <i class="fas fa-code project-icon"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Portfolio Elite</h3>
+                            <p>Portafolio avanzado desarrollado con React + TypeScript + Three.js. Incluye animaciones 3D, PWA, y efectos visuales inmersivos.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Three.js</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://artucruzarm.github.io/portfolio-elite/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Ver Demo
+                                </a>
+                                <a href="https://github.com/ArturoCruzArm/portfolio-elite" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i> Código
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card floating">
+                        <div class="project-image">
+                            <i class="fas fa-database project-icon"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Sistema ERP Coqueta y Audaz</h3>
+                            <p>Sistema empresarial con optimización SQL avanzada (+80% rendimiento), automatización de procesos y arquitectura MVVM.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java Spring Boot</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">MVVM</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link disabled">
+                                    <i class="fas fa-lock"></i> Privado
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card floating">
+                        <div class="project-image">
+                            <i class="fas fa-video project-icon"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Producciones Foro 7</h3>
+                            <p>Empresa de producción multimedia con 150+ eventos realizados. Especializada en edición 4K y gestión integral de eventos.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Adobe Premiere</span>
+                                <span class="tech-tag">4K Video</span>
+                                <span class="tech-tag">Fotografía</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#contacto" class="project-link">
+                                    <i class="fas fa-phone"></i> Contactar
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

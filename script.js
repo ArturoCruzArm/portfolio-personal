@@ -1,5 +1,36 @@
+// Función para alternar tema
+function toggleTheme() {
+    const body = document.body;
+    const themeIcon = document.getElementById('theme-icon');
+    const currentTheme = body.getAttribute('data-theme');
+    
+    if (currentTheme === 'dark') {
+        body.setAttribute('data-theme', 'light');
+        themeIcon.className = 'fas fa-moon';
+        localStorage.setItem('theme', 'light');
+    } else {
+        body.setAttribute('data-theme', 'dark');
+        themeIcon.className = 'fas fa-sun';
+        localStorage.setItem('theme', 'dark');
+    }
+}
+
+// Aplicar tema guardado al cargar
+function loadSavedTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const themeIcon = document.getElementById('theme-icon');
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.body.setAttribute('data-theme', 'dark');
+        if (themeIcon) themeIcon.className = 'fas fa-sun';
+    }
+}
+
 // Navegación suave
 document.addEventListener('DOMContentLoaded', function() {
+    // Cargar tema guardado
+    loadSavedTheme();
     // Performance optimization: usar passive listeners donde sea posible
     const addPassiveEventListener = (element, event, handler) => {
         element.addEventListener(event, handler, { passive: true });
@@ -98,6 +129,62 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         cardObserver.observe(card);
     });
+    
+    // Parallax scrolling effect
+    function handleParallax() {
+        const scrolled = window.pageYOffset;
+        const parallaxElements = document.querySelectorAll('.parallax');
+        
+        parallaxElements.forEach(element => {
+            const speed = 0.5;
+            const yPos = -(scrolled * speed);
+            element.style.transform = `translate3d(0, ${yPos}px, 0)`;
+        });
+    }
+    
+    // Throttled scroll handler
+    let ticking = false;
+    function scrollHandler() {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                handleParallax();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }
+    
+    addPassiveEventListener(window, 'scroll', scrollHandler);
+    
+    // Reveal animations on scroll
+    function revealOnScroll() {
+        const reveals = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right');
+        
+        reveals.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const elementVisible = 150;
+            
+            if (elementTop < window.innerHeight - elementVisible) {
+                element.classList.add('revealed');
+            }
+        });
+    }
+    
+    addPassiveEventListener(window, 'scroll', revealOnScroll);
+    revealOnScroll(); // Check on load
+    
+    // Performance monitoring
+    function logPerformance() {
+        if ('performance' in window) {
+            window.addEventListener('load', () => {
+                const perfData = performance.timing;
+                const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+                console.log(`⚡ Página cargada en ${pageLoadTime}ms`);
+            });
+        }
+    }
+    
+    logPerformance();
     
     // Typing effect para el título principal (opcional)
     const heroTitle = document.querySelector('.hero-content h1');
