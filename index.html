@@ -36,6 +36,18 @@
     <meta name="msapplication-TileColor" content="#2563eb">
     <link rel="canonical" href="https://artucruzarm.github.io/portfolio-personal/">
     
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Portfolio JA">
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    
     <title>Juan Arturo Cruz Armenta - Desarrollador Full Stack | Backend Developer</title>
     <!-- Versión actualizada: 2025-07-31 -->
     <link rel="stylesheet" href="styles.css">
@@ -45,22 +57,23 @@
     <!-- Skip link para accesibilidad -->
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
     
-    <header class="header">
-        <nav class="nav">
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Navegación principal">
             <div class="nav-brand">
                 <h1>Juan Arturo Cruz Armenta</h1>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#perfil">Perfil</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#educacion">Educación</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="#perfil" role="menuitem" aria-describedby="perfil-desc">Perfil</a></li>
+                <li role="none"><a href="#habilidades" role="menuitem" aria-describedby="habilidades-desc">Habilidades</a></li>
+                <li role="none"><a href="#proyectos" role="menuitem" aria-describedby="proyectos-desc">Proyectos</a></li>
+                <li role="none"><a href="#experiencia" role="menuitem" aria-describedby="experiencia-desc">Experiencia</a></li>
+                <li role="none"><a href="#educacion" role="menuitem" aria-describedby="educacion-desc">Educación</a></li>
+                <li role="none"><a href="#contacto" role="menuitem" aria-describedby="contacto-desc">Contacto</a></li>
             </ul>
-            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar tema">
-                <i class="fas fa-moon" id="theme-icon"></i>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar entre tema claro y oscuro" aria-describedby="theme-status">
+                <i class="fas fa-moon" id="theme-icon" aria-hidden="true"></i>
             </button>
+            <div id="theme-status" class="sr-only" aria-live="polite"></div>
         </nav>
     </header>
 
@@ -82,9 +95,10 @@
             </div>
         </section>
 
-        <section id="perfil" class="section">
+        <section id="perfil" class="section" role="region" aria-labelledby="perfil-title">
             <div class="container">
-                <h2>🚀 Perfil Profesional</h2>
+                <h2 id="perfil-title">🚀 Perfil Profesional</h2>
+                <div id="perfil-desc" class="sr-only">Información sobre mi experiencia profesional y habilidades</div>
                 <p>Soy un desarrollador Full-Stack especializado en Java y React, con sólida experiencia en automatización de procesos, backend empresarial y dirección creativa audiovisual. Estudiante activo en UVEG, con habilidades certificadas en redes, programación, DevOps básico y edición multimedia. Desde los 12 años dirijo Producciones Foro 7, combinando lo técnico con lo artístico para crear soluciones integrales y experiencias visuales memorables.</p>
             </div>
         </section>

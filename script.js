@@ -1,17 +1,22 @@
-// Función para alternar tema
+// Función para alternar tema con accesibilidad mejorada
 function toggleTheme() {
     const body = document.body;
     const themeIcon = document.getElementById('theme-icon');
+    const themeStatus = document.getElementById('theme-status');
     const currentTheme = body.getAttribute('data-theme');
     
     if (currentTheme === 'dark') {
         body.setAttribute('data-theme', 'light');
         themeIcon.className = 'fas fa-moon';
+        themeStatus.textContent = 'Tema claro activado';
         localStorage.setItem('theme', 'light');
+        showToast('Tema claro activado', 'success', 2000);
     } else {
         body.setAttribute('data-theme', 'dark');
         themeIcon.className = 'fas fa-sun';
+        themeStatus.textContent = 'Tema oscuro activado';
         localStorage.setItem('theme', 'dark');
+        showToast('Tema oscuro activado', 'success', 2000);
     }
 }
 
@@ -185,6 +190,104 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     logPerformance();
+    
+    // Lazy loading de imágenes
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.remove('lazy');
+                img.classList.add('loaded');
+                observer.unobserve(img);
+            }
+        });
+    });
+    
+    images.forEach(img => imageObserver.observe(img));
+    
+    // Preload critical resources
+    function preloadCriticalResources() {
+        const criticalResources = [
+            'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css'
+        ];
+        
+        criticalResources.forEach(resource => {
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'style';
+            link.href = resource;
+            document.head.appendChild(link);
+        });
+    }
+    
+    preloadCriticalResources();
+    
+    // Toast notification system
+    function showToast(message, type = 'info', duration = 3000) {
+        const toast = document.createElement('div');
+        toast.className = `toast ${type}`;
+        toast.innerHTML = `
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
+                <span>${message}</span>
+            </div>
+        `;
+        
+        document.body.appendChild(toast);
+        
+        // Show toast
+        setTimeout(() => toast.classList.add('show'), 100);
+        
+        // Hide toast
+        setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => document.body.removeChild(toast), 300);
+        }, duration);
+    }
+    
+    // PWA Install functionality
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        
+        // Show install button
+        const installBtn = document.createElement('button');
+        installBtn.className = 'install-prompt';
+        installBtn.innerHTML = '<i class="fas fa-download"></i> Instalar App';
+        installBtn.onclick = () => {
+            installBtn.style.display = 'none';
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                    showToast('¡App instalada exitosamente!', 'success');
+                } else {
+                    showToast('Instalación cancelada', 'info');
+                }
+                deferredPrompt = null;
+            });
+        };
+        
+        document.body.appendChild(installBtn);
+        setTimeout(() => installBtn.classList.add('show'), 1000);
+    });
+    
+    // Service Worker registration
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(registration => {
+                    console.log('✅ SW registrado:', registration);
+                    showToast('Portfolio disponible offline', 'success');
+                })
+                .catch(error => {
+                    console.log('❌ SW falló:', error);
+                    showToast('Error cargando funciones offline', 'error');
+                });
+        });
+    }
     
     // Typing effect para el título principal (opcional)
     const heroTitle = document.querySelector('.hero-content h1');
