@@ -65,7 +65,7 @@ Para personalizar la página:
 
 ## 📞 Contacto
 
-- 📧 foro7.producciones@hoytmail.com
+- 📧 foro7.producciones@hotmail.com
 - 📧 foro7.arturocruz@gmail.com
 - 📧 juanarturoruzarmenta@outlook.com
 - 🔗 [GitHub](https://github.com/ArturoCruzArm)
