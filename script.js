@@ -103,7 +103,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Copy email to clipboard functionality
     const emailLinks = document.querySelectorAll('li');
     emailLinks.forEach(li => {
-        const text = li.textContent;
+        let text = li.textContent;
+        
+        // Corregir email específicamente si contiene hoytmail
+        if (text.includes('hoytmail.com')) {
+            text = text.replace('hoytmail.com', 'hotmail.com');
+            li.innerHTML = li.innerHTML.replace('hoytmail.com', 'hotmail.com');
+        }
+        
         if (text.includes('@') && text.includes('.com')) {
             li.style.cursor = 'pointer';
             li.title = 'Click para copiar email';
