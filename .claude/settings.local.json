@@ -25,7 +25,18 @@
       "Bash(rm:*)",
       "Bash(ls:*)",
       "Bash(npm run lint)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(move manifest.json manifest.webmanifest)",
+      "Bash(mv:*)",
+      "Bash(ssh-keygen:*)",
+      "Bash(cat:*)",
+      "Bash(find:*)",
+      "Bash(magick:*)",
+      "Bash(convert:*)",
+      "Bash(python:*)",
+      "Bash(gh workflow:*)",
+      "Bash(gh run list:*)",
+      "Bash(gh run watch:*)"
     ],
     "deny": []
   }
