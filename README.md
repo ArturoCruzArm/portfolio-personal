@@ -2,6 +2,9 @@
 
 Página web personal para búsqueda de empleo como Desarrollador Backend & Full Stack.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-🌐%20Ver%20Página-brightgreen?style=for-the-badge)](https://arturocruzarm.github.io/portfolio-personal)
+[![Repository](https://img.shields.io/badge/GitHub-📂%20Repositorio-blue?style=for-the-badge&logo=github)](https://github.com/ArturoCruzArm/portfolio-personal)
+
 ## 🚀 Características
 
 - ✅ Diseño responsivo y moderno
