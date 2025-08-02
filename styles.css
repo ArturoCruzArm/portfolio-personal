@@ -59,6 +59,53 @@ body {
     }
 }
 
+/* Optimizaciones para dispositivos de bajos recursos */
+.low-end-device .floating,
+.low-end-device .parallax,
+.low-end-device .morphing {
+    animation: none !important;
+    transform: none !important;
+}
+
+.low-end-device::before,
+.low-end-device::after {
+    display: none !important;
+}
+
+.reduced-motion .floating,
+.reduced-motion .parallax,
+.reduced-motion .fade-in-up,
+.reduced-motion .fade-in-left,
+.reduced-motion .fade-in-right {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* Focus visible para mejor accesibilidad */
+.focus-visible:focus {
+    outline: 2px solid var(--primary-color) !important;
+    outline-offset: 2px !important;
+}
+
+/* Skip links */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    z-index: 1000;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
 /* Focus visible para accesibilidad */
 :focus-visible {
     outline: 2px solid var(--primary-color);

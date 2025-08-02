@@ -32,14 +32,51 @@ function loadSavedTheme() {
     }
 }
 
+// Performance & Error Handling
+const performanceOptimizations = {
+    isLowEnd: navigator.hardwareConcurrency < 4 || navigator.deviceMemory < 4,
+    prefersReducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+    
+    init() {
+        if (this.isLowEnd) {
+            document.body.classList.add('low-end-device');
+            console.log('Low-end device detected, optimizations applied');
+        }
+        
+        if (this.prefersReducedMotion) {
+            document.body.classList.add('reduced-motion');
+        }
+    }
+};
+
+// Error Boundary para JavaScript
+window.addEventListener('error', function(event) {
+    console.error('JavaScript Error:', event.error);
+    showToast('Error inesperado. Recargando...', 'error', 3000);
+    
+    // Auto-reload en errores críticos (opcional)
+    if (event.error && event.error.name === 'ChunkLoadError') {
+        setTimeout(() => window.location.reload(), 2000);
+    }
+});
+
 // Navegación suave
 document.addEventListener('DOMContentLoaded', function() {
-    // Cargar tema guardado
-    loadSavedTheme();
-    // Performance optimization: usar passive listeners donde sea posible
-    const addPassiveEventListener = (element, event, handler) => {
-        element.addEventListener(event, handler, { passive: true });
-    };
+    try {
+        // Inicializar optimizaciones de performance
+        performanceOptimizations.init();
+        
+        // Cargar tema guardado
+        loadSavedTheme();
+        
+        // Performance optimization: usar passive listeners donde sea posible
+        const addPassiveEventListener = (element, event, handler) => {
+            element.addEventListener(event, handler, { passive: true });
+        };
+    } catch (error) {
+        console.error('Error during initialization:', error);
+        showToast('Error de inicialización', 'error', 2000);
+    }
     // Smooth scrolling para los enlaces de navegación
     const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
     

@@ -39,7 +39,10 @@
       "Bash(gh run list:*)",
       "Bash(gh run watch:*)",
       "Bash(copy:*)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "Bash(git pull:*)",
+      "Bash(dir:*)",
+      "mcp__ide__getDiagnostics"
     ],
     "deny": []
   }
