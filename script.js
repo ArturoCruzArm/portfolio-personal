@@ -139,16 +139,19 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
     
-    // Mobile menu toggle (si decides agregarlo después)
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+    // Scroll to top button functionality
+    const scrollToTopBtn = document.getElementById('scrollToTop');
     
-    if (mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            this.classList.toggle('active');
-        });
+    function updateScrollToTopButton() {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
     }
+    
+    addPassiveEventListener(window, 'scroll', throttle(updateScrollToTopButton, 100));
+    updateScrollToTopButton(); // Check on load
     
     // Animación de entrada para las tarjetas
     const cards = document.querySelectorAll('.skill-category, .experience-item, .education-item, .contact-info, .portfolio-links');
@@ -385,6 +388,94 @@ document.addEventListener('DOMContentLoaded', function() {
                     }, 2000);
                 });
             });
+        }
+    });
+});
+
+// Mobile menu functionality
+function toggleMobileMenu() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const navBackdrop = document.getElementById('nav-backdrop');
+    const isOpen = navMenu.classList.contains('mobile-open');
+    
+    if (isOpen) {
+        closeMobileMenu();
+    } else {
+        openMobileMenu();
+    }
+}
+
+function openMobileMenu() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const navBackdrop = document.getElementById('nav-backdrop');
+    
+    mobileMenuToggle.classList.add('open');
+    mobileMenuToggle.setAttribute('aria-expanded', 'true');
+    navMenu.classList.add('mobile-open');
+    navBackdrop.classList.add('active');
+    
+    // Prevent body scroll when menu is open
+    document.body.style.overflow = 'hidden';
+    
+    // Focus first menu item
+    const firstMenuItem = navMenu.querySelector('a');
+    if (firstMenuItem) {
+        setTimeout(() => firstMenuItem.focus(), 300);
+    }
+}
+
+function closeMobileMenu() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const navBackdrop = document.getElementById('nav-backdrop');
+    
+    mobileMenuToggle.classList.remove('open');
+    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+    navMenu.classList.remove('mobile-open');
+    navBackdrop.classList.remove('active');
+    
+    // Restore body scroll
+    document.body.style.overflow = '';
+}
+
+// Scroll to top functionality
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Close mobile menu when clicking on menu links
+document.addEventListener('DOMContentLoaded', function() {
+    const navMenuLinks = document.querySelectorAll('.nav-menu a');
+    
+    navMenuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Close mobile menu if it's open
+            const navMenu = document.getElementById('nav-menu');
+            if (navMenu.classList.contains('mobile-open')) {
+                closeMobileMenu();
+            }
+        });
+    });
+    
+    // Close mobile menu on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            const navMenu = document.getElementById('nav-menu');
+            if (navMenu.classList.contains('mobile-open')) {
+                closeMobileMenu();
+            }
+        }
+    });
+    
+    // Close mobile menu on window resize if screen becomes larger
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            closeMobileMenu();
         }
     });
 });

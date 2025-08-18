@@ -2084,6 +2084,13 @@ input:focus-visible {
     html {
         -webkit-overflow-scrolling: touch;
         overflow-scrolling: touch;
+        scroll-padding-top: 80px;
+    }
+    
+    body {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-size-adjust: 100%;
     }
     
     /* Optimize animations for mobile */
@@ -2122,6 +2129,110 @@ input:focus-visible {
     .project-link:active {
         transform: scale(0.95);
         transition: transform 0.1s ease;
+    }
+    
+    /* Mobile text optimization */
+    .hero-content h1,
+    .hero-content h2,
+    .section h2 {
+        word-wrap: break-word;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+    }
+    
+    /* Mobile content spacing */
+    .section {
+        margin-bottom: 1rem;
+    }
+    
+    /* Optimize mobile images */
+    .project-image {
+        height: 100px;
+    }
+    
+    .project-icon {
+        font-size: 2.5rem;
+    }
+    
+    /* Mobile performance optimizations */
+    .skill-category::before,
+    .experience-item::after,
+    .project-card::before {
+        display: none;
+    }
+    
+    /* Mobile menu accessibility */
+    .nav-menu a {
+        line-height: 1.2;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    /* Mobile form elements */
+    button,
+    .btn {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 8px;
+    }
+    
+    /* Mobile viewport fixes */
+    .hero {
+        position: relative;
+        z-index: 1;
+    }
+    
+    /* Swipe gestures preparation */
+    .projects-grid,
+    .skills-grid {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .project-card,
+    .skill-category {
+        scroll-snap-align: start;
+        flex-shrink: 0;
+    }
+    
+    /* Mobile search optimization */
+    .sr-only {
+        clip: rect(1px, 1px, 1px, 1px);
+        -webkit-clip-path: inset(50%);
+        clip-path: inset(50%);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        word-wrap: normal;
+    }
+    
+    /* Mobile loading optimization */
+    .hero::before,
+    .hero::after {
+        will-change: transform;
+        transform: translateZ(0);
+    }
+    
+    /* Mobile click delay reduction */
+    a, button, input, [role="button"] {
+        touch-action: manipulation;
+    }
+    
+    /* Mobile context menu prevention */
+    img, .project-icon {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
 }
 
@@ -2187,5 +2298,248 @@ input:focus-visible {
     .hero-content {
         max-width: 60%;
         margin: 0 auto;
+    }
+}
+
+/* Mobile hamburger menu */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-menu-toggle:hover {
+    background-color: var(--bg-alt);
+}
+
+.hamburger {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+}
+
+.hamburger span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: var(--text-primary);
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0px;
+}
+
+.hamburger span:nth-child(2),
+.hamburger span:nth-child(3) {
+    top: 9px;
+}
+
+.hamburger span:nth-child(4) {
+    top: 18px;
+}
+
+.mobile-menu-toggle.open .hamburger span:nth-child(1) {
+    top: 9px;
+    width: 0%;
+    left: 50%;
+}
+
+.mobile-menu-toggle.open .hamburger span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.mobile-menu-toggle.open .hamburger span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.mobile-menu-toggle.open .hamburger span:nth-child(4) {
+    top: 9px;
+    width: 0%;
+    left: 50%;
+}
+
+/* Mobile menu styles */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+        order: 3;
+    }
+    
+    .nav {
+        position: relative;
+    }
+    
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-primary);
+        box-shadow: var(--shadow-lg);
+        border-radius: 0 0 1rem 1rem;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0.5rem;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+        max-height: 0;
+        overflow: hidden;
+    }
+    
+    .nav-menu.mobile-open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        max-height: 400px;
+    }
+    
+    .nav-menu a {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        background-color: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+    }
+    
+    .nav-menu a:active {
+        background-color: var(--primary-color);
+        color: white;
+        transform: scale(0.98);
+    }
+    
+    /* Backdrop for mobile menu */
+    .nav-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-backdrop.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* Floating Action Button for scroll to top */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    touch-action: manipulation;
+}
+
+.scroll-to-top.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.scroll-to-top:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-neon);
+}
+
+.scroll-to-top:active {
+    transform: scale(0.95);
+}
+
+/* Mobile keyboard navigation */
+@media (max-width: 768px) {
+    .nav-menu a:focus {
+        outline: 3px solid var(--primary-color);
+        outline-offset: 2px;
+        background-color: var(--primary-color);
+        color: white;
+    }
+    
+    /* Better mobile form elements */
+    input, textarea, select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 0.5rem;
+        border: 2px solid var(--border-color);
+        padding: 1rem;
+        font-size: 16px;
+        background: var(--bg-primary);
+        color: var(--text-primary);
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    input:focus, textarea:focus, select:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+}
+
+/* Mobile performance improvements */
+@media (max-width: 768px) {
+    /* GPU acceleration for smooth animations */
+    .nav-menu,
+    .mobile-menu-toggle,
+    .scroll-to-top,
+    .btn,
+    .project-card {
+        will-change: transform;
+        transform: translateZ(0);
+    }
+    
+    /* Reduce paint complexity */
+    .hero::before,
+    .hero::after {
+        content: none;
+    }
+    
+    /* Optimize scroll performance */
+    .section {
+        contain: layout style paint;
+    }
+    
+    /* Mobile text rendering */
+    body {
+        text-rendering: optimizeSpeed;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 }

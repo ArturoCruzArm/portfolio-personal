@@ -62,7 +62,7 @@
             <div class="nav-brand">
                 <h1>Juan Arturo Cruz Armenta</h1>
             </div>
-            <ul class="nav-menu" role="menubar">
+            <ul class="nav-menu" role="menubar" id="nav-menu">
                 <li role="none"><a href="#perfil" role="menuitem" aria-describedby="perfil-desc">Perfil</a></li>
                 <li role="none"><a href="#habilidades" role="menuitem" aria-describedby="habilidades-desc">Habilidades</a></li>
                 <li role="none"><a href="#proyectos" role="menuitem" aria-describedby="proyectos-desc">Proyectos</a></li>
@@ -73,8 +73,17 @@
             <button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar entre tema claro y oscuro" aria-describedby="theme-status">
                 <i class="fas fa-moon" id="theme-icon" aria-hidden="true"></i>
             </button>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menú de navegación móvil" aria-expanded="false" aria-controls="nav-menu">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
             <div id="theme-status" class="sr-only" aria-live="polite"></div>
         </nav>
+        <div class="nav-backdrop" id="nav-backdrop" onclick="closeMobileMenu()"></div>
     </header>
 
     <main id="main-content">
@@ -447,6 +456,11 @@
             <p>CURP: CUAJ931018HGTRRN04 | RFC: CUAJ931018F36</p>
         </div>
     </footer>
+
+    <!-- Botón flotante para volver arriba -->
+    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()" aria-label="Volver al inicio">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
