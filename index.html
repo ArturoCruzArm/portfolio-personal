@@ -1,467 +1,288 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Juan Arturo Cruz Armenta - Desarrollador Backend & Full Stack especializado en Java Spring Boot, React.js, Python. Productor Multimedia con 150+ eventos. León, Guanajuato, México.">
-    <meta name="keywords" content="desarrollador full stack, java spring boot, react.js, python, sql optimization, backend developer, productor multimedia, león guanajuato, programador">
-    <meta name="author" content="Juan Arturo Cruz Armenta">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="es">
-    <meta name="revisit-after" content="7 days">
-    
-    <!-- Performance and Mobile Optimization -->
-    <meta name="format-detection" content="telephone=no">
-    <meta name="format-detection" content="email=no">
-    <meta name="format-detection" content="address=no">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="dns-prefetch" href="https://github.com">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Juan Arturo Cruz Armenta - Desarrollador Full Stack">
-    <meta property="og:description" content="Desarrollador Backend & Full Stack especializado en Java Spring Boot, React.js, Python. Productor Multimedia profesional con 12+ años de experiencia.">
-    <meta property="og:image" content="https://arturocruzarm.github.io/portfolio-personal/og-image.jpg">
-    <meta property="og:url" content="https://arturocruzarm.github.io/portfolio-personal/">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="es_MX">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Juan Arturo Cruz Armenta - Desarrollador Full Stack">
-    <meta name="twitter:description" content="Desarrollador Backend & Full Stack especializado en Java Spring Boot, React.js, Python. Productor Multimedia profesional.">
-    <meta name="twitter:image" content="https://arturocruzarm.github.io/portfolio-personal/og-image.jpg">
-    
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#2563eb">
-    <meta name="msapplication-TileColor" content="#2563eb">
-    <link rel="canonical" href="https://arturocruzarm.github.io/portfolio-personal/">
-    
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Portfolio JA">
-    
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    
-    <title>Juan Arturo Cruz Armenta - Desarrollador Full Stack | Backend Developer</title>
-    <!-- Versión actualizada: 2025-07-31 -->
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV - Juan Arturo Cruz Armenta</title>
+  <meta name="description" content="CV de Juan Arturo Cruz Armenta: Analista Programador Web y Soporte de Sistemas con experiencia en ERP, bases de datos, infraestructura, redes y digitalizacion industrial.">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #5f6b7a;
+      --line: #d8dee7;
+      --paper: #ffffff;
+      --soft: #f4f7fb;
+      --accent: #0f766e;
+      --accent-2: #b7791f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.48;
+      color: var(--ink);
+      background: var(--soft);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page {
+      width: min(1080px, calc(100% - 32px));
+      margin: 28px auto;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: 0 16px 36px rgba(23, 32, 51, 0.08);
+    }
+    header {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: 1fr auto;
+      padding: 34px 40px 26px;
+      border-bottom: 4px solid var(--accent);
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(32px, 5vw, 46px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+    .headline {
+      margin: 10px 0 0;
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 780px;
+    }
+    .contact {
+      display: grid;
+      gap: 6px;
+      align-content: start;
+      min-width: 280px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .main {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 310px;
+      gap: 30px;
+      padding: 30px 40px 38px;
+    }
+    section { margin-bottom: 28px; }
+    h2 {
+      margin: 0 0 12px;
+      padding-bottom: 7px;
+      border-bottom: 1px solid var(--line);
+      color: var(--accent);
+      font-size: 17px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+    h3 {
+      margin: 0;
+      font-size: 17px;
+    }
+    .role {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .role:first-of-type { padding-top: 0; }
+    .role:last-child { border-bottom: 0; }
+    .meta {
+      margin: 3px 0 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+    li { margin: 5px 0; }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .chip {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 13px;
+      color: var(--ink);
+    }
+    aside {
+      border-left: 1px solid var(--line);
+      padding-left: 28px;
+    }
+    .note {
+      background: #f8fafc;
+      border-left: 4px solid var(--accent-2);
+      padding: 12px 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .actions {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+      padding: 0 40px 30px;
+    }
+    button {
+      cursor: pointer;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-weight: 700;
+    }
+    @media (max-width: 850px) {
+      header, .main { grid-template-columns: 1fr; }
+      header, .main { padding-left: 22px; padding-right: 22px; }
+      aside { border-left: 0; padding-left: 0; }
+      .contact { min-width: 0; }
+      .actions { justify-content: flex-start; padding-left: 22px; }
+    }
+    @media print {
+      body { background: #fff; }
+      .page { width: 100%; margin: 0; border: 0; box-shadow: none; }
+      .actions { display: none; }
+      header { padding-top: 18px; }
+      section { break-inside: avoid; }
+      a { color: inherit; }
+    }
+  </style>
 </head>
 <body>
-    <!-- Skip link para accesibilidad -->
-    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
-    
-    <header class="header" role="banner">
-        <nav class="nav" role="navigation" aria-label="Navegación principal">
-            <div class="nav-brand">
-                <h1>Juan Arturo Cruz Armenta</h1>
-            </div>
-            <ul class="nav-menu" role="menubar" id="nav-menu">
-                <li role="none"><a href="#perfil" role="menuitem" aria-describedby="perfil-desc">Perfil</a></li>
-                <li role="none"><a href="#habilidades" role="menuitem" aria-describedby="habilidades-desc">Habilidades</a></li>
-                <li role="none"><a href="#proyectos" role="menuitem" aria-describedby="proyectos-desc">Proyectos</a></li>
-                <li role="none"><a href="#experiencia" role="menuitem" aria-describedby="experiencia-desc">Experiencia</a></li>
-                <li role="none"><a href="#educacion" role="menuitem" aria-describedby="educacion-desc">Educación</a></li>
-                <li role="none"><a href="#contacto" role="menuitem" aria-describedby="contacto-desc">Contacto</a></li>
-            </ul>
-            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar entre tema claro y oscuro" aria-describedby="theme-status">
-                <i class="fas fa-moon" id="theme-icon" aria-hidden="true"></i>
-            </button>
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menú de navegación móvil" aria-expanded="false" aria-controls="nav-menu">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-            <div id="theme-status" class="sr-only" aria-live="polite"></div>
-        </nav>
-        <div class="nav-backdrop" id="nav-backdrop" onclick="closeMobileMenu()"></div>
+  <article class="page">
+    <header>
+      <div>
+        <h1>Juan Arturo Cruz Armenta</h1>
+        <p class="headline">Analista Programador Web y Soporte de Sistemas | ERP, bases de datos, redes, infraestructura y digitalizacion industrial</p>
+      </div>
+      <div class="contact" aria-label="Datos de contacto">
+        <span>Leon, Guanajuato, Mexico</span>
+        <span><a href="tel:+524779203776">+52 477 920 3776</a></span>
+        <span><a href="mailto:juanarturocruzarmenta@outlook.com">juanarturocruzarmenta@outlook.com</a></span>
+        <span><a href="https://www.linkedin.com/in/juanarturocruzarmenta/">linkedin.com/in/juanarturocruzarmenta</a></span>
+        <span><a href="https://github.com/ArturoCruzArm">github.com/ArturoCruzArm</a></span>
+      </div>
     </header>
 
-    <main id="main-content">
-        <section class="hero parallax">
-            <div class="hero-content">
-                <h1 class="floating">🎓 Juan Arturo Cruz Armenta</h1>
-                <h2 class="gradient-text">Desarrollador Backend & Full Stack | Productor Multimedia | Emprendedor Creativo</h2>
-                <p class="location floating">📍 León, Guanajuato, México</p>
-                <div class="hero-buttons">
-                    <a href="#contacto" class="btn btn-primary">Contáctame</a>
-                    <a href="https://github.com/ArturoCruzArm" class="btn btn-secondary" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="cv-juan-arturo-cruz.html" class="btn btn-secondary" target="_blank">
-                        <i class="fas fa-download"></i> CV
-                    </a>
-                </div>
-            </div>
+    <div class="main">
+      <main>
+        <section>
+          <h2>Perfil profesional</h2>
+          <p>
+            Estudiante activo de Ingenieria en Sistemas Computacionales en UVEG, con experiencia en entorno industrial
+            desarrollando y soportando aplicaciones internas, integraciones con ERP, bases de datos, servidores,
+            redes y seguridad perimetral. Enfocado en digitalizar procesos productivos, reducir captura manual y
+            mejorar la trazabilidad operativa con soluciones practicas para planta.
+          </p>
         </section>
 
-        <section id="perfil" class="section" role="region" aria-labelledby="perfil-title">
-            <div class="container">
-                <h2 id="perfil-title">🚀 Perfil Profesional</h2>
-                <div id="perfil-desc" class="sr-only">Información sobre mi experiencia profesional y habilidades</div>
-                <p>Soy un desarrollador Full-Stack especializado en Java y React con 5 años de experiencia profesional en automatización de procesos, backend empresarial y desarrollo web avanzado. Estudié en el Instituto Tecnológico de León (2016-2021) y especializándome en Big Data y Análisis de Datos. Nivel de inglés intermedio-avanzado. Busco oportunidades de desarrollo de software entre semana.</p>
-            </div>
+        <section>
+          <h2>Experiencia profesional</h2>
+          <div class="role">
+            <h3>Analista Programador Web y Soporte de Sistemas</h3>
+            <p class="meta">Grupo Coqueta y Audaz / Operaciones Kodiak, MAB y Cuali | Leon, Gto. | Jul. 2022 - Jul. 2025</p>
+            <ul>
+              <li>Desarrollo y mantenimiento de aplicaciones para operaciones productivas con PHP, Yii2, JavaScript, Node.js y SQL.</li>
+              <li>Integracion y consulta de ERP/sistemas empresariales: Curtits, Microsip, SIMAC, Magnus, MP Software y SIGEK.</li>
+              <li>Diseno, consulta y optimizacion de bases Firebird y MySQL para reportes, conciliaciones y trazabilidad operativa.</li>
+              <li>Digitalizacion de produccion, pedidos, pesaje, etiquetado, tarimas, mantenimiento, indicadores y seguimiento de operaciones.</li>
+              <li>Soporte a servidores virtualizados Windows Server y CentOS, redes Cisco Catalyst, wireless y seguridad Fortinet.</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <h3>Desarrollador Full-Stack</h3>
+            <p class="meta">Ai Lab | Leon, Gto. | Ene. 2020 - Dic. 2021</p>
+            <ul>
+              <li>Desarrollo de aplicacion web para el Consulado de Mexico en EE.UU. y kiosco interactivo con realidad aumentada.</li>
+              <li>Trabajo frontend, backend, control de versiones con Git y colaboracion tecnica con equipos de proyecto.</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <h3>Topografo / Analista Tecnico de Redes</h3>
+            <p class="meta">ZTE | Leon, Gto. | Jun. 2019 - Ago. 2021</p>
+            <ul>
+              <li>Diseno de topologia logica de red de fibra optica para Leon, analisis geoespacial y documentacion tecnica.</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <h3>Tecnico en Informatica</h3>
+            <p class="meta">Foro 7 Producciones | Leon, Gto. | Abr. 2013 - Abr. 2018</p>
+            <ul>
+              <li>Soporte a paginas web, atencion tecnica, mantenimiento de soluciones digitales y apoyo informatico en operacion diaria.</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <h3>Desarrollador de Aplicaciones</h3>
+            <p class="meta">Vianney | Leon, Gto. | May. 2012 - May. 2014</p>
+            <ul>
+              <li>Digitalizacion de procesos manuales, levantamiento de requerimientos y administracion de bases MySQL.</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <aside>
+        <section>
+          <h2>Educacion</h2>
+          <div class="role">
+            <h3>UVEG</h3>
+            <p class="meta">Ingenieria en Sistemas Computacionales | Sep. 2024 - Jun. 2027 previsto</p>
+            <p>33 materias aprobadas, 80% de avance. Estadia Profesional: 480 horas / 6 meses.</p>
+          </div>
+          <div class="role">
+            <h3>Instituto Tecnologico de Leon</h3>
+            <p class="meta">Ingenieria en Sistemas Computacionales | Ene. 2016 - Jun. 2021</p>
+            <p>Estudios previos en sistemas computacionales.</p>
+          </div>
         </section>
 
-        <section id="habilidades" class="section bg-alt">
-            <div class="container">
-                <h2>💻 Habilidades Clave</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Tecnologías</h3>
-                        <ul>
-                            <li>Java, Spring Boot</li>
-                            <li>React.js, Python</li>
-                            <li>SQL (Optimización)</li>
-                            <li>PHP, HTML/CSS</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Multimedia</h3>
-                        <ul>
-                            <li>Adobe Premiere Pro</li>
-                            <li>Afcore</li>
-                            <li>Edición Profesional 4K</li>
-                            <li>Fotografía de Eventos</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Otros</h3>
-                        <ul>
-                            <li>Inglés (Intermedio-Avanzado)</li>
-                            <li>DevOps Básico</li>
-                            <li>Cisco Networking</li>
-                            <li>Big Data & Analytics</li>
-                            <li>Gestión de Proyectos</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <section>
+          <h2>Habilidades</h2>
+          <div class="chips">
+            <span class="chip">PHP</span><span class="chip">Yii2</span><span class="chip">JavaScript</span>
+            <span class="chip">Node.js</span><span class="chip">SQL</span><span class="chip">Firebird</span>
+            <span class="chip">MySQL</span><span class="chip">ERP</span><span class="chip">Business Intelligence</span>
+            <span class="chip">Windows Server</span><span class="chip">CentOS</span><span class="chip">Cisco</span>
+            <span class="chip">Fortinet</span><span class="chip">Git</span><span class="chip">Digitalizacion</span>
+          </div>
         </section>
 
-        <section id="proyectos" class="section bg-alt">
-            <div class="container">
-                <h2>🚀 Proyectos Destacados</h2>
-                <div class="projects-grid">
-                    <div class="project-card floating">
-                        <div class="project-image">
-                            <i class="fas fa-code project-icon"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Portfolio Elite</h3>
-                            <p>Portafolio avanzado desarrollado con React + TypeScript + Three.js. Incluye animaciones 3D, PWA, y efectos visuales inmersivos.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">TypeScript</span>
-                                <span class="tech-tag">Three.js</span>
-                                <span class="tech-tag">Framer Motion</span>
-                                <span class="tech-tag">Tailwind CSS</span>
-                            </div>
-                            <div class="project-features">
-                                <h4>🎯 Características Principales:</h4>
-                                <ul>
-                                    <li>✨ Animaciones 3D interactivas con Three.js</li>
-                                    <li>🎨 Sistema de temas personalizable</li>
-                                    <li>📱 PWA con funcionalidad offline</li>
-                                    <li>🎪 Modo presentación para demostraciones</li>
-                                    <li>⚡ Lazy loading y optimización de rendimiento</li>
-                                </ul>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://arturocruzarm.github.io/portfolio-elite/" target="_blank" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i> Ver Demo
-                                </a>
-                                <a href="https://github.com/ArturoCruzArm/portfolio-elite" target="_blank" class="project-link">
-                                    <i class="fab fa-github"></i> Código
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card floating">
-                        <div class="project-image">
-                            <i class="fas fa-database project-icon"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Sistema ERP Coqueta y Audaz</h3>
-                            <p>Sistema empresarial completo con optimización SQL avanzada (+80% rendimiento), automatización de procesos y arquitectura MVVM escalable.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Java Spring Boot</span>
-                                <span class="tech-tag">MySQL</span>
-                                <span class="tech-tag">MVVM</span>
-                                <span class="tech-tag">REST API</span>
-                                <span class="tech-tag">Jenkins</span>
-                            </div>
-                            <div class="project-features">
-                                <h4>🎯 Logros Técnicos:</h4>
-                                <ul>
-                                    <li>🚀 Optimización de consultas SQL (mejora del 80%)</li>
-                                    <li>⚙️ Automatización con jobs y triggers</li>
-                                    <li>🏗️ Arquitectura MVVM escalable</li>
-                                    <li>🔄 Integración continua con Jenkins</li>
-                                    <li>📊 Dashboard de métricas en tiempo real</li>
-                                </ul>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link disabled">
-                                    <i class="fas fa-lock"></i> Proyecto Privado
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card floating">
-                        <div class="project-image">
-                            <i class="fas fa-video project-icon"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Producciones Multimedia</h3>
-                            <p>Empresa de producción multimedia fundada en 2019, especializada en eventos sociales con más de 150 producciones realizadas y crecimiento sostenido.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Adobe Premiere Pro</span>
-                                <span class="tech-tag">After Effects</span>
-                                <span class="tech-tag">4K Video</span>
-                                <span class="tech-tag">Fotografía</span>
-                                <span class="tech-tag">Gestión</span>
-                            </div>
-                            <div class="project-features">
-                                <h4>🎯 Servicios Especializados:</h4>
-                                <ul>
-                                    <li>🎬 Edición profesional con Adobe Suite</li>
-                                    <li>📸 Fotografía de eventos en 4K</li>
-                                    <li>🎭 Cobertura completa de eventos sociales</li>
-                                    <li>💼 Gestión integral de proyectos</li>
-                                    <li>⭐ 6+ años de experiencia comprobada</li>
-                                </ul>
-                            </div>
-                            <div class="project-links">
-                                <a href="#contacto" class="project-link">
-                                    <i class="fas fa-phone"></i> Contactar
-                                </a>
-                                <a href="tel:+52-477-XXX-XXXX" class="project-link">
-                                    <i class="fas fa-mobile-alt"></i> Llamar
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Nuevos proyectos adicionales -->
-                    <div class="project-card floating">
-                        <div class="project-image">
-                            <i class="fas fa-globe project-icon"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Portal Web Institucional ITL</h3>
-                            <p>Desarrollo y mantenimiento del sitio web institucional del Instituto Tecnológico de León, incluyendo sistemas de gestión académica.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">PHP</span>
-                                <span class="tech-tag">MySQL</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">Bootstrap</span>
-                            </div>
-                            <div class="project-features">
-                                <h4>🎯 Contribuciones:</h4>
-                                <ul>
-                                    <li>🌐 Desarrollo de portal web institucional</li>
-                                    <li>📚 Sistema de gestión académica</li>
-                                    <li>🔍 Optimización de bases de datos MySQL</li>
-                                    <li>📱 Diseño responsive y accesible</li>
-                                </ul>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://www.itleon.edu.mx" target="_blank" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i> Ver Sitio
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card floating">
-                        <div class="project-image">
-                            <i class="fas fa-robot project-icon"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Proyectos AI Labs</h3>
-                            <p>Desarrollo freelance de aplicaciones web con React y Node.js, incluyendo integración de soluciones de inteligencia artificial.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">AI/ML</span>
-                                <span class="tech-tag">APIs</span>
-                            </div>
-                            <div class="project-features">
-                                <h4>🎯 Desarrollos Realizados:</h4>
-                                <ul>
-                                    <li>🤖 Integración de APIs de IA</li>
-                                    <li>⚡ Aplicaciones web con React</li>
-                                    <li>🔧 APIs RESTful con Node.js</li>
-                                    <li>📊 Microservicios escalables</li>
-                                </ul>
-                            </div>
-                            <div class="project-links">
-                                <a href="#contacto" class="project-link">
-                                    <i class="fas fa-envelope"></i> Consultar
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card floating">
-                        <div class="project-image">
-                            <i class="fas fa-chart-line project-icon"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Análisis de Big Data - UVEG</h3>
-                            <p>Especialización en análisis de grandes volúmenes de datos y extracción de insights para la toma de decisiones empresariales.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">SQL</span>
-                                <span class="tech-tag">Analytics</span>
-                                <span class="tech-tag">Data Mining</span>
-                                <span class="tech-tag">Business Intelligence</span>
-                            </div>
-                            <div class="project-features">
-                                <h4>🎯 Competencias Desarrolladas:</h4>
-                                <ul>
-                                    <li>📊 Análisis estadístico avanzado</li>
-                                    <li>🔍 Minería de datos empresariales</li>
-                                    <li>📈 Visualización de insights</li>
-                                    <li>💡 Business Intelligence</li>
-                                </ul>
-                            </div>
-                            <div class="project-links">
-                                <a href="#educacion" class="project-link">
-                                    <i class="fas fa-graduation-cap"></i> Ver Formación
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <section>
+          <h2>Disponibilidad</h2>
+          <p class="note">
+            Disponible para Estadia Profesional UVEG, medio tiempo y proyectos relacionados con Sistemas Computacionales,
+            IT, Business Intelligence, automatizacion, soporte o infraestructura. Seguro estudiantil tramitado.
+          </p>
         </section>
 
-        <section id="experiencia" class="section">
-            <div class="container">
-                <h2>📌 Experiencia Relevante</h2>
-                <div class="experience-item">
-                    <h3>Coqueta y Audaz – Desarrollador Backend</h3>
-                    <p class="period">Julio 2022 – Julio 2025</p>
-                    <ul>
-                        <li>Optimización de consultas SQL (+80% rendimiento)</li>
-                        <li>Automatización con jobs, triggers y procedimientos</li>
-                        <li>Integración continua, patrón MVVM y despliegues productivos</li>
-                    </ul>
-                </div>
-                <div class="experience-item">
-                    <h3>AI Labs – Desarrollador Freelancer</h3>
-                    <p class="period">2020 – 2022</p>
-                    <ul>
-                        <li>Desarrollo de aplicaciones web con React y Node.js</li>
-                        <li>Implementación de APIs RESTful y microservicios</li>
-                        <li>Integración de soluciones de inteligencia artificial</li>
-                    </ul>
-                </div>
-                <div class="experience-item">
-                    <h3>Instituto Tecnológico Nacional de México Campus León – Desarrollador Web</h3>
-                    <p class="period">2019 – 2020</p>
-                    <ul>
-                        <li>Desarrollo y mantenimiento del sitio web institucional</li>
-                        <li>Programación de sistemas internos de gestión académica</li>
-                        <li>Optimización de bases de datos MySQL</li>
-                    </ul>
-                </div>
-                <div class="experience-item">
-                    <h3>Productor Multimedia (Fines de Semana)</h3>
-                    <p class="period">Desde 2019 – Actualidad</p>
-                    <ul>
-                        <li>Dirección y postproducción de más de 150 eventos sociales</li>
-                        <li>Edición profesional con Adobe Suite (Diplomado con validez internacional)</li>
-                        <li>Gestión integral de clientes, logística y entrega visual</li>
-                        <li>Trabajo de fines de semana, busco desarrollo software entre semana</li>
-                    </ul>
-                </div>
-            </div>
+        <section>
+          <h2>Idiomas</h2>
+          <p>Español nativo. Ingles B2 / intermedio alto.</p>
         </section>
 
-        <section id="educacion" class="section bg-alt">
-            <div class="container">
-                <h2>🎓 Formación Académica y Certificaciones</h2>
-                <div class="education-item">
-                    <h3>Universidad Virtual del Estado de Guanajuato (UVEG)</h3>
-                    
-                    <p>Especialidad en Big Data y Análisis de Negocios</p>
-                </div>
-                <div class="education-item">
-                    <h3>Instituto Tecnológico de León (ITL)</h3>
-                    <p>Ingeniería en Sistemas Computacionales | 2016 - 2021</p>
-                </div>
-                <div class="certifications">
-                    <h3>Certificaciones Técnicas y Diplomados</h3>
-                    <ul>
-                        <li>Técnico en Informática | Fundación Carlos Slim</li>
-                        <li>Curador de Datos | Fundación Carlos Slim</li>
-                        <li>Desarrollador Web | Fundación Carlos Slim</li>
-                        <li>Spring Boot, Java, React.js, Python, PHP, SQL | SoloLearn</li>
-                        <li>Networking (VLANs, Routing, STP, HSRP) | Cisco Networking Academy</li>
-                        <li>Edición de Video Digital | Diplomado internacional</li>
-                        <li>Educación Financiera | Gobierno de México (Gen. 48, Calificación: 9/10)</li>
-                    </ul>
-                </div>
-            </div>
+        <section>
+          <h2>Formacion complementaria</h2>
+          <ul>
+            <li>Cisco Networking Academy: Routing & Switching.</li>
+            <li>Fundacion Carlos Slim: formacion tecnica en informatica y contenido digital.</li>
+            <li>Herramientas de analisis, datos, documentacion tecnica y soporte.</li>
+          </ul>
         </section>
+      </aside>
+    </div>
 
-        <section id="contacto" class="section">
-            <div class="container">
-                <h2>🌐 Contacto y Portafolio</h2>
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h3>Información de Contacto</h3>
-                        <ul>
-                            <!-- Email corregido: hotmail.com (NO hoytmail.com) -->
-                            
-                            <li><i class="fas fa-envelope"></i> juanarturoruzarmenta@outlook.com</li>
-                            <li><i class="fas fa-map-marker-alt"></i> León, Guanajuato, México</li>
-                            <li><i class="fas fa-birthday-cake"></i> 18 de octubre de 1993</li>
-                        </ul>
-                    </div>
-                    <div class="portfolio-links">
-                        <h3>Portafolio y Redes</h3>
-                        <ul>
-                            <li><a href="https://github.com/ArturoCruzArm" target="_blank"><i class="fab fa-github"></i> GitHub: ArturoCruzArm</a></li>
-                            <li><a href="https://linkedin.com/in/juanarturocruzarmenta" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                            <li><i class="fas fa-video"></i> Reels y muestras creativas disponibles bajo solicitud</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="quote">
-                    <blockquote>
-                        ✨ "Apasionado por la tecnología y el arte visual. Disfruto resolver problemas complejos con código y capturar historias a través del lente. Mi meta es integrar ambas disciplinas para crear experiencias digitales memorables."
-                    </blockquote>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Juan Arturo Cruz Armenta. Todos los derechos reservados.</p>
-            <p>CURP: CUAJ931018HGTRRN04 | RFC: CUAJ931018F36</p>
-        </div>
-    </footer>
-
-    <!-- Botón flotante para volver arriba -->
-    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()" aria-label="Volver al inicio">
-        <i class="fas fa-chevron-up" aria-hidden="true"></i>
-    </button>
-
-    <script src="script.js"></script>
+    <div class="actions">
+      <button type="button" onclick="window.print()">Imprimir / guardar PDF</button>
+    </div>
+  </article>
 </body>
 </html>

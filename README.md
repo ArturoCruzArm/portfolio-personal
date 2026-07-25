@@ -1,78 +1,24 @@
-# Juan Arturo Cruz Armenta - Portafolio Personal
+# Portfolio / CV - Juan Arturo Cruz Armenta
 
-Página web personal para búsqueda de empleo como Desarrollador Backend & Full Stack.
+Portfolio actualizado con enfoque de TI industrial, soporte de sistemas, ERP, infraestructura y digitalizacion de procesos.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-🌐%20Ver%20Página-brightgreen?style=for-the-badge)](https://arturocruzarm.github.io/portfolio-personal)
-[![Repository](https://img.shields.io/badge/GitHub-📂%20Repositorio-blue?style=for-the-badge&logo=github)](https://github.com/ArturoCruzArm/portfolio-personal)
+## Enfoque profesional
 
-## 🚀 Características
+Juan Arturo Cruz Armenta es estudiante activo de Ingenieria en Sistemas Computacionales en UVEG y cuenta con experiencia como Analista Programador Web y Soporte de Sistemas en operaciones industriales.
 
-- ✅ Diseño responsivo y moderno
-- ✅ Optimizado para GitHub Pages
-- ✅ Navegación suave entre secciones
-- ✅ Animaciones interactivas
-- ✅ Compatible con dispositivos móviles
-- ✅ SEO optimizado
+## Competencias destacadas
 
-## 📁 Estructura del Proyecto
+- Desarrollo con PHP, Yii2, JavaScript, Node.js y SQL.
+- Bases de datos Firebird y MySQL.
+- Integracion y consulta de ERP/sistemas empresariales: Curtits, Microsip, SIMAC, Magnus, MP Software y SIGEK.
+- Soporte a Windows Server, CentOS, redes Cisco y seguridad Fortinet.
+- Digitalizacion de procesos productivos, reportes, indicadores y trazabilidad operativa.
+- Disponibilidad para Estadia Profesional UVEG: 480 horas / 6 meses.
 
-```
-/
-├── index.html          # Página principal
-├── styles.css          # Estilos CSS
-├── script.js           # JavaScript interactivo
-└── README.md          # Documentación
-```
+## Contacto
 
-## 🛠️ Tecnologías Utilizadas
+- Leon, Guanajuato, Mexico.
+- Correo: juanarturocruzarmenta@outlook.com
+- LinkedIn: https://www.linkedin.com/in/juanarturocruzarmenta/
 
-- HTML5 semántico
-- CSS3 con variables custom y Flexbox/Grid
-- JavaScript vanilla (ES6+)
-- Font Awesome para iconos
-- Diseño mobile-first
-
-## 📱 Secciones Incluidas
-
-1. **Hero** - Presentación principal con nombre y título
-2. **Perfil** - Descripción profesional
-3. **Habilidades** - Tecnologías, multimedia y otras competencias
-4. **Experiencia** - Historial laboral detallado
-5. **Educación** - Formación académica y certificaciones
-6. **Contacto** - Información de contacto y enlaces a redes
-
-## 🎨 Características de Diseño
-
-- Paleta de colores profesional (azules)
-- Tipografía moderna y legible
-- Tarjetas con sombras y efectos hover
-- Animaciones suaves al hacer scroll
-- Grid responsivo para diferentes pantallas
-
-## 📦 Cómo Desplegar en GitHub Pages
-
-1. Crea un nuevo repositorio en GitHub
-2. Sube todos los archivos al repositorio
-3. Ve a Settings > Pages
-4. Selecciona "Deploy from a branch"
-5. Elige "main" branch y "/ (root)"
-6. Tu página estará disponible en: `https://tu-usuario.github.io/nombre-repositorio`
-
-## 🔧 Personalización
-
-Para personalizar la página:
-
-1. Edita `index.html` para cambiar el contenido
-2. Modifica `styles.css` para ajustar colores y estilos
-3. Actualiza `script.js` para agregar más interactividad
-
-## 📞 Contacto
-
-
-- 📧 juanarturoruzarmenta@outlook.com
-- 🔗 [GitHub](https://github.com/ArturoCruzArm)
-- 🔗 [LinkedIn](https://linkedin.com/in/juanarturocruzarmenta)
-
----
-
-💼 **Juan Arturo Cruz Armenta** - Desarrollador Backend & Full Stack | León, Guanajuato, México
+Los datos sensibles como CURP/RFC no deben publicarse en el portfolio.
