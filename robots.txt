@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://arturocruzarm.github.io/portfolio-personal/sitemap.xml
+Sitemap: https://portafolios.invitados.org/sitemap.xml
